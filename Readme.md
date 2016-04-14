@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Марина Цыганок](https://up.htmlacademy.ru/htmlcss/13/user/87903).
-* Наставник: `Неизвестно`.
+* Наставник: [Дима Ковалев](https://htmlacademy.ru/profile/dima_kovalev).
 
 ---
 
