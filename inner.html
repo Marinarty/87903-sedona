@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Седона: Забронировать гостиницу</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <a class="logo" href="#" title="Седона"><img src="#" alt="Седона"></a>
+        <nav class="main-navigation">
+          <ul>
+            <li>
+              <a href="#">Информация</a>
+            </li>
+            <li>
+              <a href="#">Фото и видео</a>
+            </li>
+            <li>
+              <a href="#">Карта штата</a>
+            </li>
+            <li>
+              <a href="#">Гостиницы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  <main class="container">
+  <div class="settings">
+      <form class="hotels-selection">
+        <fieldset class="infrastructure">
+          <legend>Инфраструктура</legend>
+            <label>
+              <input type="checkbox" checked>Бассейн
+            </label>
+            <label>
+              <input type="checkbox">Парковка
+            </label>
+            <label>
+              <input type="checkbox">Wi-Fi
+            </label>
+        </fieldset>
+        <fieldset class="accomodation">
+          <legend>Тип жилья</legend>
+            <label>
+              <input type="checkbox" checked>Гостиница
+            </label>
+            <label>
+              <input type="checkbox" checked>Мотель
+            </label>
+            <label>
+              <input type="checkbox" checked>Апартаменты
+            </label>
+        </fieldset>
+        <fieldset class="price">
+          <legend>Стоимость в сутки (р)</legend>
+            <input type="text" name="price-from" placeholder="от 0">
+            <input type="text" name="price-till" placeholder="до 3000">
+        </fieldset>
+        <button class="btn">Показать</button>
+      </form>
+  </div>
+  <div class="result">
+    <p class="all">Найдено: 3</p>
+    <p class="sorting">Сортировка:</p>
+    <span>по цене</span>
+    <!-- Возможно, что "по цене" это ссылка-->
+    <a class="sorting-type" href="#">по типу</a>
+    <a class="sorting-rating"  href="#">по рейтингу</a>
+  </div>
+  <div class="results-content">
+    <div class="results-right">
+      <a href="#"><img src="img/amara-1.png" alt="Amara Resort & Spa"></a>
+      <div class="hotel-info">
+        <h3><a href="#">Amara Resort & Spa</a></h3>
+        <div class="details">
+          <p class="type">Гостиница</p>
+          <p class="pricing">от 3500 р.</p>
+        </div>
+        <a class="more-info" href="#">Подробнее</a>
+        <a class="book" href="#">Забронировать</a>
+      </div>
+      <div class="result-left">
+        <!-- див для иконок звезд-->
+        <p>Рейтинг: 8,5</p>
+      </div>
+    </div>
+  </div>
+  <div class="results-content">
+    <div class="results-right">
+      <a href="#"><img src="img/desert-1.png" alt="Desert Quail Inn"></a>
+      <div class="hotel-info">
+        <h3><a href="#">Desert Quail Inn</a></h3>
+        <div class="details">
+          <p class="type">Мотель</p>
+          <p class="pricing">от 2000 р.</p>
+        </div>
+        <a class="more-info" href="#">Подробнее</a>
+        <a class="book" href="#">Забронировать</a>
+      </div>
+      <div class="result-left">
+        <p>Рейтинг: 8,9</p>
+      </div>
+    </div>
+  </div>
+  <div class="results-content">
+    <div class="results-right">
+      <a href="#"><img src="img/diablo-1.png" alt="Villas at Poco Diablos"></a>
+      <div class="hotel-info">
+        <h3><a href="#">Villas at Poco Diablos</a></h3>
+        <div class="details">
+          <p class="type">Апартаменты</p>
+          <p class="pricing">от 4000 р.</p>
+        </div>
+        <a class="more-info" href="#">Подробнее</a>
+        <a class="book" href="#">Забронировать</a>
+      </div>
+      <div class="result-left">
+        <p>Рейтинг: 9,2</p>
+      </div>
+    </div>
+  </div>
+  </main>
+   <footer class="main-footer">
+      <div class="container">
+        <p>#visitsedona</p>
+        <section class="footer-social">
+          <a class="social-btn social-btn-tw" href="#">Twitter</a>
+          <a class="social-btn social-btn-fb" href="#">Facebook</a>
+          <a class="social-btn social-btn-ytb" href="#">YouTube</a>
+        </section>
+        <section class="footer-copyright">
+        website by <a href="https://up.htmlacademy.ru" target="_blank"><img src="img/academy-logo.png" alt="HTML Academy"></a>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
