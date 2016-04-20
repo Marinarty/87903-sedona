@@ -2,11 +2,121 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>Седона</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
+    <header class="main-header">
+      <div class="container">
+        <a class="logo" href="#" title="Седона"><img src="#" alt="Седона"></a>
+        <nav class="main-navigation">
+          <ul>
+            <li>
+              <a href="#">Информация</a>
+            </li>
+            <li>
+              <a href="#">Фото и видео</a>
+            </li>
+            <li>
+              <a href="#">Карта штата</a>
+            </li>
+            <li>
+              <a href="#">Гостиницы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <img class="main-big-image" alt="Седона - небольшой городок в Аризоне" src="img/image-big.png">
+      <div class="introduction">
+        <h1>СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!</h1>
+        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      </div>
+      <div class="feature-block-1">
+        <div class="feature-left">
+          <p class="feature-title">Настоящий<br> городок</p>
+          <p class="feature-number">- №1 -</p>
+          <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+          <!-- Можно разметить как <p> <span></span> </p>, чтобы не присваивать лишних классов? А вместо p class="feature-title" использовать h2-h3 ?-->
+        </div>
+        <img src="img/main-image-1.png" alt="Седона-настоящий городок">
+      </div>
+      <div class="features-raw-1">
+        <div class="feature">
+          <!-- тут иконка -->
+          <p class="feature-title">Жилье</p>
+          <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+        </div>
+        <div class="feature">
+          <p class="feature-title">Еда</p>
+          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        </div>
+        <div class="feature">
+          <p class="feature-title">Сувениры</p>
+          <p>Не только китайского, но и местного производства!</p>
+        </div>
+      </div>
+        <div class="feature-block-2">
+          <div class="feature-right">
+            <p class="feature-title">Там есть<br> мост дъявола</p>
+            <p class="feature-number">- №2 -</p>
+            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          </div>
+          <img src="img/main-image-2.png" alt="Мост дъявола">
+        </div>
+        <div class="features-row-2">
+          <div class="feature">
+            <p class="feature-title">Небольшая<br> площадь</p>
+            <p class="feature-number">- №3 -</p>
+            <p>Все достопримечательности находятся очень близко</p>
+          </div>
+          <div class="feature">
+            <p class="feature-title">Красивая<br> дорога</p>
+            <p class="feature-number">- №4 -</p>
+            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </div>
+          <div class="feature">
+            <p class="feature-title">Мало<br> туристов</p>
+            <p class="feature-number">- №5 -</p>
+            <p>Большинство едет в Гранд Каньон и толпится там</p>
+          </div>
+        </div>
+        <div class="main-booking">
+          <p class="booking-title">Заинтересовались?</p>
+          <p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
+        </div>
+        <form class="main-booking-form" action="#" method="post">
+          <fieldset>
+            <legend>Поиск гостиницы в Седоне</legend>
+            <label>
+              Дата заезда: <input type="text" name="date-arrive" placeholder="24 апреля 2016">
+            </label>
+            <label>
+              Дата выезда: <input type="text" name="date-departure" placeholder="4 июля 2016">
+            </label>
+            <label>
+              Взрослые: <input type="number" name="adulte-number" placeholder="2">
+            </label>
+            <label>
+              Дети: <input type="number" name="children-number" placeholder="0">
+            </label>
+            <button class="btn" type="submit">Найти</button>
+            <!-- Можно ли использовать <input class="btn" type="submit" value="Найти"> ?-->
+          </fieldset>
+        </form>
+   </main>
+   <footer class="main-footer">
+      <div class="container">
+        <p>#visitsedona</p>
+        <section class="footer-social">
+          <a class="social-btn social-btn-tw" href="#">Twitter</a>
+          <a class="social-btn social-btn-fb" href="#">Facebook</a>
+          <a class="social-btn social-btn-ytb" href="#">YouTube</a>
+        </section>
+        <section class="footer-copyright">
+        website by <a href="https://up.htmlacademy.ru" target="_blank"><img src="img/academy-logo.png" alt="HTML Academy"></a>
+        </section>
+      </div>
+    </footer>
   </body>
 </html>
