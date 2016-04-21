@@ -27,7 +27,9 @@
       </div>
     </header>
     <main class="container">
-      <img class="main-big-image" alt="Седона - небольшой городок в Аризоне" src="img/image-big.png">
+      <div>
+        <img class="welcome-image" alt="Седона - небольшой городок в Аризоне" src="img/welcome.png">
+      </div>
       <div class="introduction">
         <h1>СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!</h1>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
@@ -37,7 +39,6 @@
           <p class="feature-title">Настоящий<br> городок</p>
           <p class="feature-number">- №1 -</p>
           <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
-          <!-- Можно разметить как <p> <span></span> </p>, чтобы не присваивать лишних классов? А вместо p class="feature-title" использовать h2-h3 ?-->
         </div>
         <img src="img/main-image-1.png" alt="Седона-настоящий городок">
       </div>
@@ -95,14 +96,23 @@
               Дата выезда: <input type="text" name="date-departure" placeholder="4 июля 2016">
             </label>
             <label>
-              Взрослые: <input type="number" name="adulte-number" placeholder="2">
+              Взрослые:
+              <div>
+                <button class="minus">-</button>
+                  <input type="number" name="adulte-number" value="2">
+                <button class="plus">+</button>
+              </div>
             </label>
             <label>
-              Дети: <input type="number" name="children-number" placeholder="0">
+              Дети:
+              <div>
+                <button class="minus">-</button>
+                  <input type="number" name="children-number" value="0">
+                <button class="plus">+</button>
+              </div>
             </label>
           </fieldset>
           <button class="btn" type="submit">Найти</button>
-          <!-- Можно ли использовать <input class="btn" type="submit" value="Найти"> ?-->
         </form>
    </main>
    <footer class="main-footer">
