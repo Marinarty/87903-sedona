@@ -27,7 +27,6 @@
       </div>
     </header>
   <main class="container">
-  <div class="settings">
       <form class="hotels-selection">
         <fieldset class="infrastructure">
           <legend>Инфраструктура</legend>
@@ -60,17 +59,19 @@
         </fieldset>
         <button class="btn">Показать</button>
       </form>
-  </div>
   <div class="result">
     <p class="all">Найдено: 3</p>
     <p class="sorting">Сортировка:</p>
-    <span>по цене</span>
-    <!-- Возможно, что "по цене" это ссылка-->
+    <a class="sorting-active" href="#">по цене</a>
     <a class="sorting-type" href="#">по типу</a>
     <a class="sorting-rating"  href="#">по рейтингу</a>
+    <div class="sorting-arrows">
+      <a class="arrow-active" href="#">˄</a>
+      <a href="#">˅</a>
+    </div>
   </div>
   <div class="results-content">
-    <div class="results-right">
+    <div class="results-left">
       <a href="#"><img src="img/amara-1.png" alt="Amara Resort & Spa"></a>
       <div class="hotel-info">
         <h3><a href="#">Amara Resort & Spa</a></h3>
@@ -81,14 +82,16 @@
         <a class="more-info" href="#">Подробнее</a>
         <a class="book" href="#">Забронировать</a>
       </div>
-      <div class="result-left">
-        <!-- див для иконок звезд-->
+      <div class="result-right">
+        <div class="rating">
+          <span class="rating-star">****
+        </div>
         <p>Рейтинг: 8,5</p>
       </div>
     </div>
   </div>
   <div class="results-content">
-    <div class="results-right">
+    <div class="results-left">
       <a href="#"><img src="img/desert-1.png" alt="Desert Quail Inn"></a>
       <div class="hotel-info">
         <h3><a href="#">Desert Quail Inn</a></h3>
@@ -99,13 +102,16 @@
         <a class="more-info" href="#">Подробнее</a>
         <a class="book" href="#">Забронировать</a>
       </div>
-      <div class="result-left">
+      <div class="result-right">
+        <div class="rating">
+          <span class="rating-star">**
+        </div>
         <p>Рейтинг: 8,9</p>
       </div>
     </div>
   </div>
   <div class="results-content">
-    <div class="results-right">
+    <div class="results-left">
       <a href="#"><img src="img/diablo-1.png" alt="Villas at Poco Diablos"></a>
       <div class="hotel-info">
         <h3><a href="#">Villas at Poco Diablos</a></h3>
@@ -116,7 +122,10 @@
         <a class="more-info" href="#">Подробнее</a>
         <a class="book" href="#">Забронировать</a>
       </div>
-      <div class="result-left">
+      <div class="result-right">
+        <div class="rating">
+          <span class="rating-star">***
+        </div>
         <p>Рейтинг: 9,2</p>
       </div>
     </div>
