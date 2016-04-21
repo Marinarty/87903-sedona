@@ -89,12 +89,14 @@
         <form class="main-booking-form" action="#" method="post">
           <fieldset>
             <legend>Поиск гостиницы в Седоне</legend>
-            <label>
-              Дата заезда: <input type="text" name="date-arrive" placeholder="24 апреля 2016">
-            </label>
-            <label>
-              Дата выезда: <input type="text" name="date-departure" placeholder="4 июля 2016">
-            </label>
+            <div>
+              <label for="date-arrive">Дата заезда:</label>
+              <input id="date-arrive" type="text" name="date-arrive" placeholder="24 апреля 2016">
+            </div>
+            <div>
+              <label for="date-departure">Дата выезда:</label>
+              <input id="date-departure" type="text" name="date-departure" placeholder="4 июля 2016">
+            </div>
             <div>
               <label for='adulte-number'>Взрослые:</label>
                 <div class='input-number'>
