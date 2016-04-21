@@ -44,6 +44,7 @@
       </div>
       <div class="features-raw-1">
         <div class="feature">
+          <!-- тут иконка -->
           <p class="feature-title">Жилье</p>
           <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </div>
@@ -94,18 +95,22 @@
             <label>
               Дата выезда: <input type="text" name="date-departure" placeholder="4 июля 2016">
             </label>
-              Взрослые:
-              <div>
-                <button class="minus">-</button>
-                  <input type="number" name="adulte-number" value="2">
-                <button class="plus">+</button>
-              </div>
-              Дети:
-              <div>
-                <button class="minus">-</button>
-                  <input type="number" name="children-number" value="0">
-                <button class="plus">+</button>
-              </div>
+            <div>
+              <label for='adulte-number'>Взрослые:</label>
+                <div class='input-number'>
+                  <button class="minus">-</button>
+                    <input id='adulte-number' type="number" name="adulte-number" value="2">
+                  <button class="plus">+</button>
+                </div>
+            </div>
+            <div>
+              <label for='children-number'>Дети:</label>
+                <div class='input-number'>
+                  <button class="minus">-</button>
+                    <input id='children-number' type="number" name="children-number" value="2">
+                  <button class="plus">+</button>
+                </div>
+            </div>
           </fieldset>
           <button class="btn" type="submit">Найти</button>
         </form>
