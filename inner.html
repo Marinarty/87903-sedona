@@ -7,10 +7,9 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="container">
-        <a class="logo" href="#" title="Седона"><img src="img/logo.png" alt="Седона"></a>
+      <div class="container clearfix">
         <nav class="main-navigation">
-          <ul>
+          <ul class="menu">
             <li>
               <a href="#">Информация</a>
             </li>
@@ -24,11 +23,12 @@
               <a href="#">Гостиницы</a>
             </li>
           </ul>
+        <a class="logo" href="#" title="Седона"><img src="img/logo.png" alt="Седона"></a>
         </nav>
       </div>
     </header>
   <main class="container">
-      <form class="hotels-selection">
+      <form class="hotels-selection clearfix">
         <fieldset class="infrastructure">
           <legend>Инфраструктура</legend>
             <label>
@@ -57,8 +57,8 @@
           <legend>Стоимость в сутки (р)</legend>
             <input type="text" name="price-from" placeholder="от 0">
             <input type="text" name="price-till" placeholder="до 3000">
+          <button class="btn">Показать</button>
         </fieldset>
-        <button class="btn">Показать</button>
       </form>
   <div class="result">
     <p class="all">Найдено: 3</p>
@@ -71,11 +71,11 @@
       <a href="#">˅</a>
     </div>
   </div>
-  <div class="results-content">
+  <div class="results-content clearfix">
     <div class="results-left">
-      <a href="#"><img src="img/hotel-1.jpg" alt="Amara Resort & Spa"></a>
+        <a class="hotel-photo" href="#"><img src="img/hotel-1.jpg" alt="Amara Resort & Spa"></a>
       <div class="hotel-info">
-        <h3><a href="#">Amara Resort & Spa</a></h3>
+        <h3><a class="hotel-name" href="#">Amara Resort & Spa</a></h3>
         <div class="details">
           <p class="type">Гостиница</p>
           <p class="pricing">от 3500 р.</p>
@@ -83,7 +83,8 @@
         <a class="more-info" href="#">Подробнее</a>
         <a class="book" href="#">Забронировать</a>
       </div>
-      <div class="result-right">
+    </div>
+      <div class="results-right">
         <div class="rating">
           <span class="rating-star">*</span>
           <span class="rating-star">*</span>
@@ -92,11 +93,10 @@
         </div>
         <p>Рейтинг: 8,5</p>
       </div>
-    </div>
   </div>
-  <div class="results-content">
+  <div class="results-content clearfix">
     <div class="results-left">
-      <a href="#"><img src="img/hotel-2.jpg" alt="Desert Quail Inn"></a>
+      <a class="hotel-photo" href="#"><img src="img/hotel-2.jpg" alt="Desert Quail Inn"></a>
       <div class="hotel-info">
         <h3><a href="#">Desert Quail Inn</a></h3>
         <div class="details">
@@ -106,18 +106,18 @@
         <a class="more-info" href="#">Подробнее</a>
         <a class="book" href="#">Забронировать</a>
       </div>
-      <div class="result-right">
+    </div>
+      <div class="results-right">
         <div class="rating">
           <span class="rating-star">*</span>
           <span class="rating-star">*</span>
         </div>
         <p>Рейтинг: 8,9</p>
       </div>
-    </div>
   </div>
-  <div class="results-content">
+  <div class="results-content celarfix">
     <div class="results-left">
-      <a href="#"><img src="img/hotel-3.jpg" alt="Villas at Poco Diablos"></a>
+      <a class="hotel-photo" href="#"><img src="img/hotel-3.jpg" alt="Villas at Poco Diablos"></a>
       <div class="hotel-info">
         <h3><a href="#">Villas at Poco Diablos</a></h3>
         <div class="details">
@@ -127,7 +127,8 @@
         <a class="more-info" href="#">Подробнее</a>
         <a class="book" href="#">Забронировать</a>
       </div>
-      <div class="result-right">
+    </div>
+      <div class="results-right">
         <div class="rating">
           <span class="rating-star">*</span>
           <span class="rating-star">*</span>
@@ -135,12 +136,11 @@
         </div>
         <p>Рейтинг: 9,2</p>
       </div>
-    </div>
   </div>
   </main>
-   <footer class="main-footer">
-      <div class="container">
-        <p>#visitsedona</p>
+   <footer class="main-footer hotels">
+      <div class="container clearfix">
+        <section class="hash">#visitsedona</section>
         <section class="footer-social">
           <a class="social-btn social-btn-tw" href="#">Twitter</a>
           <a class="social-btn social-btn-fb" href="#">Facebook</a>
