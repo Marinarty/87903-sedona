@@ -1,14 +1,12 @@
 body {
   font-size: 14px;
+  margin: 0px;
+  padding: 0px;
   line-height: 21px;
   color: black;
   font-style: normal;
-  font-family: "PT Sans"
-}
-
-body {
-  background: white url("sedona-index-1200-background.jpg") no-repeat 50% 3px;
-  background-size: 1122px auto;
+  font-family: "PT Sans";
+  background-color: grey;
 }
 
 .clearfix::after {
@@ -21,7 +19,6 @@ body {
 .main-header {
   /* Только для оформления сетки */
   min-height: 56px;
-  margin-bottom: 75px;
 }
 
 .container {
@@ -33,6 +30,7 @@ body {
 
 .main-navigation {
   width: 1200px;
+  position: relative;
   /* Только для оформления сетки */
   min-height: 56px;
 }
@@ -40,8 +38,10 @@ body {
 .logo {
   width: 138px;
   display: block;
-  margin-right: auto;
-  margin-left: auto;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
 }
 
 .menu {
@@ -53,20 +53,12 @@ body {
   text-align:center;
 }
 
-.menu li:nth-child(1) {
+.menu li:nth-child(-n+2) {
   float:left;
 }
 
-.menu  li:nth-child(2) {
-  float:left;
-}
-
-.menu  li:nth-child(3) {
-  float:right;
-}
-
-.menu  li:nth-child(4) {
-  float:right;
+.menu li:nth-last-child(-n+2) {
+   float: right;
 }
 
 li {
@@ -90,11 +82,17 @@ h3 {
 }
 
 .banner {
+  height: 564px;
+  margin-top: 76px;
+}
+
+.welcome-image {
   width: 458px;
   height: 352px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 155px;
+  margin-bottom: 145px;
+  display: block;
 }
 
 .introduction {
@@ -162,10 +160,15 @@ h3 {
 
 .hotels-selection {
   margin-top: 35px;
-  margin-left: 73px;
-  margin-right: 73px;
   /* Только для оформления сетки */
   height: 217px;
+}
+
+.container-inner {
+  width: 1054px;
+  margin: 0 auto;
+  padding-left: 73px;
+  padding-right: 73px;
 }
 
 .infrastructure,
@@ -182,8 +185,6 @@ h3 {
 }
 
 .result {
-  margin-left: 73px;
-  margin-right: 73px;
   margin-bottom: 38px;
 }
 
@@ -192,33 +193,34 @@ h3 {
 }
 
 .sorting-arrows {
+  width: 37px;
   float: right;
+  text-align: right;
 }
 
 .results-content {
   height: 151px;
-  margin-left: 73px;
-  margin-right: 73px;
 }
 
 .hotel-photo {
+  width: 135px;
   display: block;
   float: left;
   margin-right: 30px;
 }
 
-.hotel-name {
-  float: left;
-}
-
 .results-left {
+  width: 70%;
   float: left;
 }
 
 .hotel-info {
+  width: 562px;
   float: left;
 }
 
 .results-right {
+  width: 111px;
   float: right;
+  text-align: right;
 }
