@@ -6,7 +6,6 @@ body {
   color: black;
   font-style: normal;
   font-family: "PT Sans";
-  background-color: grey;
 }
 
 .clearfix::after {
@@ -82,7 +81,7 @@ h3 {
 }
 
 .banner {
-  height: 564px;
+  height: 508px;
   margin-top: 76px;
 }
 
@@ -91,7 +90,6 @@ h3 {
   height: 352px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 145px;
   display: block;
 }
 
