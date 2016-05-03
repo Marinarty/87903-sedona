@@ -1,11 +1,17 @@
-body {
-  font-size: 14px;
+html, body {
   margin: 0px;
   padding: 0px;
+}
+
+body {
+  min-width: 1200px;
+  font-weight: 500;
+  font-size: 14px;
   line-height: 21px;
-  color: black;
-  font-style: normal;
-  font-family: "PT Sans";
+  color: #000000;
+  font-family: "PT Sans", "Arial", sans-serif;
+  background-color: f2f2f2;
+  text-transform: uppercase;
 }
 
 .clearfix::after {
@@ -15,23 +21,46 @@ body {
   clear: both;
 }
 
-.main-header {
-  /* Только для оформления сетки */
+/* .main-header {
+  /* Только для оформления сетки
   min-height: 56px;
-}
+  не пригодилось
+} */
 
 .container {
   width: 1200px;
   margin: 0 auto;
-  /* Только для оформления сетки */
-  min-height: 56px;
+  background-color: #ffffff;
+  /* Только для оформления сетки
+  min-height: 56px; */
 }
 
 .main-navigation {
   width: 1200px;
+  color: #000000;
   position: relative;
-  /* Только для оформления сетки */
   min-height: 56px;
+}
+
+.main-navigation ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 0;
+}
+
+.main-navigation a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.main-navigation a:hover {
+  color: #a3c7de;
+}
+
+.main-navigation a:active {
+  color: #b2b2b2;
 }
 
 .logo {
@@ -43,51 +72,55 @@ body {
   transform: translateX(-50%);
 }
 
-.menu {
-  padding: 0px;
-}
-
-.menu li {
+.main-navigation li {
+  display: inline-block;
   width: 240px;
+  font-size: 14px;
+  line-height: 26px;
+  vertical-align: top;
   text-align:center;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-.menu li:nth-child(-n+2) {
+.main-navigation li:nth-child(-n+2) {
   float:left;
 }
 
-.menu li:nth-last-child(-n+2) {
+.main-navigation li:nth-last-child(-n+2) {
    float: right;
-}
-
-li {
-  display: inline;
 }
 
 h1 {
   font-size: 21px;
   line-height: 26px;
-  color: black;
-  font-style: normal;
-  font-family: "PT Sans"
+  margin: 0;
+  padding: 0;
 }
+
 h3 {
   font-size: 21px;
   line-height: 21px;
-  color: black;
-  font-style: normal;
-  font-family: "PT Sans";
-  margin: 0px;
+  margin: 0;
+  padding: 0;
+}
+/* возможно, не пригодится */
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 .banner {
   height: 508px;
-  margin-top: 76px;
+  background: #e5f2fa url("../img/index-background.jpg") no-repeat;
+  margin-bottom: 62px;
 }
 
 .welcome-image {
   width: 458px;
   height: 352px;
+  padding-top: 76px;
   margin-right: auto;
   margin-left: auto;
   display: block;
@@ -101,45 +134,201 @@ h3 {
   text-align: center;
 }
 
-
-.feature-left {
-  width: 400px;
-  float: left;
-  text-align: center;
+.introduction p {
+  margin-top: 35px;
 }
 
-.feature {
-  width: 400px;
+
+.feature-left {
+  width: 300px;
   float: left;
   text-align: center;
-    /* Только для оформления сетки */
-    height: 330px;
+  padding: 52px 50px;
+  background-color: #81b3d2;
+  color: #ffffff;
+}
+
+.feature-left p {
+ font-size: 14px;
+ line-height: 21px;
+}
+
+
+.feature-right .feature-number,
+.feature-left .feature-number,
+.feature .feature-number {
+  margin-bottom: 24px;
+}
+
+/* под контентными картинками остается фон в неск. пикселей высотой. Откуда он берется?*/
+.feature {
+  width: 300px;
+  float: left;
+  text-align: center;
+  padding: 52px 50px;
+  color: #000000;
+}
+
+.features-raw-1 .feature {
+  position: relative;
+  padding-top: 160px;
+  padding-bottom: 85px;
+}
+
+.features-raw-1 .location::before {
+  content: "";
+  position: absolute;
+  top: 58px;
+  left: 162px;
+  width: 80px;
+  height: 80px;
+  background: url("../img/location.png") no-repeat;
+}
+
+.features-raw-1 .food::before {
+  content: "";
+  position: absolute;
+  top: 58px;
+  left: 162px;
+  width: 80px;
+  height: 80px;
+  background: url("../img/food.png") no-repeat;
+}
+
+.features-raw-1 .souvenirs::before {
+  content: "";
+  position: absolute;
+  top: 58px;
+  left: 165px;
+  width: 80px;
+  height: 80px;
+  background: url("../img/souvenirs.png") no-repeat;
+}
+
+/* 1. рациональнее ли эти три иконки сделать спрайтом? Можено в одном проекте использовать и спрайты и икон. шрифты?
+   2. у иконки souvenirs значение top отличается (она визуально не распологалась по центру)
+   3. нужно ли выносить повторяющиеся свойства иконок в отдельный общий для них класс? насколько это критично?
+
+ */
+
+.features-row-2 .feature {
+  background-color: f2f2f2;
+}
+
+.feature-left .feature-title,
+.feature-right .feature-title,
+.feature .feature-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 21px;
+  margin-bottom: 23px;
 }
 
 .feature-right {
-  width: 400px;
+  width: 300px;
   float: right;
   text-align: center;
+  padding: 52px 50px;
+  background-color: #81b3d2;
+  color: #ffffff;
 }
 
 .main-booking {
   width: 460px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 60px;
   margin-bottom: 55px;
   text-align: center;
 }
+
+.main-booking .booking-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-top: 56px;
+  margin-bottom: 35px;
+}
+
+/* как-то можно сбросить стили у формы по умолчанию? рамки и тени в инпутах?
+и с формой все грустенько. мне нужен пинок, в каком направлении начать с ней работать - в плане размещения элементов формы*/
 
 .main-booking-form {
   width: 572px;
   margin-right: auto;
   margin-left: auto;
-
+  margin-top: 52px;
+  font-weight: 700;
+  text-align: left;
+  box-shadow: 0 15px 0 0;
+  /* вот почему box-shadow не работает? */
 }
 
-.main-footer {
-  margin-top: 80px;
+.main-booking-form legend {
+  background-color: #766357;
+  width: 100%;
+  font-size: 21px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 55px;
+  text-align: center;
+  color: #ffffff;
+}
+.main-booking-form input {
+  margin-right: 50px;
+  margin-bottom: 30px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+}
+
+.main-booking-form input:hover {
+  background-color: #ebebeb;
+}
+
+.main-booking-form input:focus {
+  background-color: #ffffff;
+  border: 2px solid #ebebeb;
+}
+
+.btn {
+  display: inline-block;
+  padding: 20px 0;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  vertical-align: top;
+  text-align: center;
+  background-color: #81b3d2;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.main-booking-form .btn {
+  clear: both;
+  width: 100%;
+}
+
+.main-booking-form .btn:hover {
+  background-color: #669ec0;
+}
+
+.main-booking-form .btn:active {
+  background-color: #5496bd;
+}
+
+footer .container {
+  background-color: #ffffff;
   padding-top: 36px;
   padding-bottom: 36px;
 }
@@ -153,7 +342,69 @@ h3 {
 .footer-copyright {
   width: 400px;
   float: left;
+  display: inline-block;
+  /* почему тут не работает inline-block ? */
   text-align: center;
+  vertical-align: middle;
+}
+
+.hash {
+  font-size: 21;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+
+.social-btn {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  margin: 0 5px;
+  font-size: 0;
+  vertical-align: top;
+  text-decoration: none;
+  background-color: #81b3d2;
+}
+
+.social-btn:hover {
+  background-color: #669ec0;
+}
+
+.social-btn:active {
+  background-color: #5496bd;
+}
+
+.social-btn .social-btn-tw {
+ background: url("../img/tw.png") no-repeat;
+}
+
+/*почему не отображается иконка? */
+
+.social-btn .social-btn-tw:active {
+ opacity: 0.5;
+}
+
+.social-btn .social-btn-fb {
+
+}
+
+.social-btn .social-btn-ytb {
+
+}
+
+.academy-logo {
+  display: inline-block;
+  background: url("../img/academy-logo.png")
+}
+
+/*почему не отображается лого? */
+
+.academy-logo:hover {
+  background: url("../img/academy-logo-hover.png")
+}
+
+.academy-logo:active {
+  background: url("../img/academy-logo-hover.png")
 }
 
 .hotels-selection {
