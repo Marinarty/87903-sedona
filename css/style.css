@@ -209,7 +209,7 @@ p {
 }
 
 /* 1. рациональнее ли эти три иконки сделать спрайтом? Можено в одном проекте использовать и спрайты и икон. шрифты?
-   2. у иконки souvenirs значение top отличается (она визуально не распологалась по центру)
+   2. у иконки souvenirs значениz top и left отличаются (она визуально не распологалась по центру)
    3. нужно ли выносить повторяющиеся свойства иконок в отдельный общий для них класс? насколько это критично?
 
  */
@@ -254,19 +254,31 @@ p {
   margin-bottom: 35px;
 }
 
-/* как-то можно сбросить стили у формы по умолчанию? рамки и тени в инпутах?
-и с формой все грустенько. мне нужен пинок, в каком направлении начать с ней работать - в плане размещения элементов формы*/
+fieldset {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* с формой все грустенько. мне нужен пинок, в каком направлении начать с ней работать - в плане размещения элементов формы*/
 
 .main-booking-form {
-  width: 572px;
+  width: 576px;
+  height: 480px;
+/*padding-left: 52px;
+  padding-right:  52px; если прописывать паддинги форме, то разъезжается леджент и кнопка. Почему?*/
   margin-right: auto;
   margin-left: auto;
   margin-top: 52px;
   font-weight: 700;
   text-align: left;
-  box-shadow: 0 15px 0 0;
-  /* вот почему box-shadow не работает? */
+  box-shadow: 0 1px 5px 0px;
+  position: relative;
+  index-z: 10;
 }
+
+
 
 .main-booking-form legend {
   background-color: #766357;
@@ -279,11 +291,9 @@ p {
   color: #ffffff;
 }
 .main-booking-form input {
-  margin-right: 50px;
-  margin-bottom: 30px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;
   font-size: 14px;
   line-height: 21px;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -301,8 +311,10 @@ p {
   border: 2px solid #ebebeb;
 }
 
-.btn {
+ .main-booking-form .btn-booking {
   display: inline-block;
+  width: 450px;
+  margin: 54px 58px;
   padding: 20px 0;
   font-weight: 700;
   font-size: 21px;
@@ -317,11 +329,6 @@ p {
   border: none;
   outline: none;
   cursor: pointer;
-}
-
-.main-booking-form .btn {
-  clear: both;
-  width: 100%;
 }
 
 .main-booking-form .btn:hover {
@@ -366,7 +373,7 @@ footer .container {
 }
 
 .hash {
-  font-size: 21;
+  font-size: 21px;
   line-height: 26px;
   font-weight: 700;
 }
@@ -375,9 +382,9 @@ footer .container {
 .social-btn {
   display: inline-block;
   position: relative;
-  width: 48px;
+  width: 45px;
   height: 48px;
-  margin: 0 5px;
+  margin-right: 1px;    /* там явно есть какие-то доп. маргины, хотя шрифт обнулен */
   font-size: 0px;
   vertical-align: top;
   text-decoration: none;
@@ -406,21 +413,8 @@ footer .container {
 /* .social-btn .social-btn-tw {
  background: url("../img/tw.png") no-repeat;
 }
+/* здесь я пробовала исп. изображение, а не шрифт. но иконка не отобразилась. почему? */
 
-/*почему не отображается иконка?
-
-.social-btn .social-btn-tw:active {
- opacity: 0.5;
-}
-
-.social-btn .social-btn-fb {
-
-}
-
-.social-btn .social-btn-ytb {
-
-}
-*/
 .academy-logo {
   display: inline-block;
   vertical-align: top;
@@ -440,7 +434,7 @@ footer .container {
 .container-inner {
   width: 1054px;
   margin: 0 auto;
-  padding-left: 73px;
+  padding-left: 73px; /* тут где-то ошибка, ты мне посоветовал поставить main паддинги и убрать маргины у элементов, но так мне вообще не удастся делать подложки.*/
   padding-right: 73px;
   background-color: #ffffff;
 }
@@ -448,8 +442,9 @@ footer .container {
 .hotels-selection {
   margin-top: 35px;
   color: #ffffff;
+  background: url("../img/background-inner.jpg") no-repeat;
   /* Только для оформления сетки */
-  background-color: black;
+
   height: 217px;
 }
 
