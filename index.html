@@ -9,7 +9,7 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="container clearfix">  <!-- тут не нужен клеарфикс -->
+      <div class="container">
         <nav class="main-navigation clearfix">
           <ul>
             <li>
@@ -19,10 +19,10 @@
               <a href="#">Фото и видео</a>
             </li>
             <li>
-              <a href="#">Карта штата</a>
+              <a href="#">Гостиницы</a>
             </li>
             <li>
-              <a href="#">Гостиницы</a>
+              <a href="#">Карта штата</a>
             </li>
           </ul>
           <a class="logo" href="#" title="Седона"><img src="img/logo.png" alt="Седона"></a>
@@ -93,32 +93,32 @@
             <legend>Поиск гостиницы в Седоне</legend>
             <div>
               <label for="date-arrive">Дата заезда:</label>
-              <input id="date-arrive" type="text" name="date-arrive" placeholder="24 апреля 2016">
+              <input id="date-arrive" type="text" name="date-arrive" value="24 апреля 2016"><button class="icon-calendar"></button>
             </div>
             <div>
               <label for="date-departure">Дата выезда:</label>
-              <input id="date-departure" type="text" name="date-departure" placeholder="4 июля 2016">
+              <input id="date-departure" type="text" name="date-departure" value="4 июля 2016"><button class="icon-calendar"></button>
             </div>
             <div>
               <label for='adulte-number'>Взрослые:</label>
                 <div class='input-number'>
-                  <button class="minus">-</button>
+                  <button class="icon-minus"></button>
                     <input id='adulte-number' type="number" name="adulte-number" value="2">
-                  <button class="plus">+</button>
+                  <button class="icon-plus"></button>
                 </div>
             </div>
             <div>
               <label for='children-number'>Дети:</label>
                 <div class='input-number'>
-                  <button class="minus">-</button>
+                  <button class="icon-minus"></button>
                     <input id='children-number' type="number" name="children-number" value="2">
-                  <button class="plus">+</button>
+                  <button class="icon-plus"></button>
                 </div>
             </div>
             <button class="btn" type="submit">Найти</button>
           </fieldset>
         </form>
-  <!--      <div class="map">
+<!-- <div class="map">
           <img src="img/map.jpg" alt="карта">
         </div> -->
    </main>
@@ -126,9 +126,9 @@
       <div class="container clearfix">
         <section class="hash">#visitsedona</section>
         <section class="footer-social">
-          <a class="social-btn social-btn-tw" href="#">Twitter</a>
-          <a class="social-btn social-btn-fb" href="#">Facebook</a>
-          <a class="social-btn social-btn-ytb" href="#">YouTube</a>
+          <a class="social-btn" href="#">Twitter<span class="icon-twitter"></span></a>
+          <a class="social-btn" href="#">Facebook<span class="icon-facebook"></span></a>
+          <a class="social-btn" href="#">YouTube<span class="icon-youtube"></span></a>
         </section>
         <section class="footer-copyright">
         website by <div class="academy-logo"><a href="https://htmlacademy.ru/" target="_blank"></a></div>

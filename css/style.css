@@ -114,7 +114,7 @@ p {
 .banner {
   height: 508px;
   background: #e5f2fa url("../img/index-background.jpg") no-repeat;
-  margin-bottom: 62px;
+  margin-bottom: 60px;
 }
 
 .welcome-image {
@@ -130,14 +130,18 @@ p {
   width: 576px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 60px;
+  margin-bottom: 55px;
   text-align: center;
 }
 
 .introduction p {
-  margin-top: 35px;
+  margin-top: 30px;
 }
 
+.feature-block-1 img,
+.feature-block-2 img {
+  display: block;
+}
 
 .feature-left {
   width: 300px;
@@ -160,7 +164,6 @@ p {
   margin-bottom: 24px;
 }
 
-/* под контентными картинками остается фон в неск. пикселей высотой. Откуда он берется?*/
 .feature {
   width: 300px;
   float: left;
@@ -198,7 +201,7 @@ p {
 .features-raw-1 .souvenirs::before {
   content: "";
   position: absolute;
-  top: 58px;
+  top: 55px;
   left: 165px;
   width: 80px;
   height: 80px;
@@ -213,6 +216,8 @@ p {
 
 .features-row-2 .feature {
   background-color: f2f2f2;
+  padding-top: 45px;
+  padding-bottom: 60px;
 }
 
 .feature-left .feature-title,
@@ -327,6 +332,18 @@ p {
   background-color: #5496bd;
 }
 
+.main-navigation .active {
+  color: #766357;
+}
+
+.main-navigation .active:hover {
+  color: #604e43;
+}
+
+.main-navigation .active:active {
+  color: #d6d0cc;
+}
+
 footer .container {
   background-color: #ffffff;
   padding-top: 36px;
@@ -345,7 +362,7 @@ footer .container {
   display: inline-block;
   /* почему тут не работает inline-block ? */
   text-align: center;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 .hash {
@@ -357,13 +374,24 @@ footer .container {
 
 .social-btn {
   display: inline-block;
+  position: relative;
   width: 48px;
   height: 48px;
   margin: 0 5px;
-  font-size: 0;
+  font-size: 0px;
   vertical-align: top;
   text-decoration: none;
   background-color: #81b3d2;
+  color: #ffffff;
+  text-align: center;
+}
+
+.social-btn span {
+  font-size: 19px;
+  line-height: 20px;
+  position: absolute;
+  right: 10px;            /* не смогла выровнять иконки по центру без position. Перемудрила? */
+  bottom: 15px;
 }
 
 .social-btn:hover {
@@ -372,13 +400,14 @@ footer .container {
 
 .social-btn:active {
   background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
 }
 
-.social-btn .social-btn-tw {
+/* .social-btn .social-btn-tw {
  background: url("../img/tw.png") no-repeat;
 }
 
-/*почему не отображается иконка? */
+/*почему не отображается иконка?
 
 .social-btn .social-btn-tw:active {
  opacity: 0.5;
@@ -391,9 +420,10 @@ footer .container {
 .social-btn .social-btn-ytb {
 
 }
-
+*/
 .academy-logo {
   display: inline-block;
+  vertical-align: top;
   background: url("../img/academy-logo.png")
 }
 
@@ -404,13 +434,7 @@ footer .container {
 }
 
 .academy-logo:active {
-  background: url("../img/academy-logo-hover.png")
-}
-
-.hotels-selection {
-  margin-top: 35px;
-  /* Только для оформления сетки */
-  height: 217px;
+  opacity: 0.3;
 }
 
 .container-inner {
@@ -418,37 +442,207 @@ footer .container {
   margin: 0 auto;
   padding-left: 73px;
   padding-right: 73px;
+  background-color: #ffffff;
+}
+
+.hotels-selection {
+  margin-top: 35px;
+  color: #ffffff;
+  /* Только для оформления сетки */
+  background-color: black;
+  height: 217px;
 }
 
 .infrastructure,
 .accomodation {
   width: 300px;
   float: left;
-  text-align: center;
+  text-align: left;
+}
+
+.hotels-selection legend {
+font-size: 16px;
+line-height: 21px;
+font-weight: 700;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  display: block;
+  margin: 20px 0;
+  line-height: 21px;
+  padding-left: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label::before {
+  content: "\2610";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "simbols-sedona";
+  font-size: 26px;
+}
+
+input[type="checkbox"]:checked + label::before {
+  content: "\2611";
+}
+
+input[type="checkbox"] + .disabled::before {
+  opacity: 0.3;
 }
 
 .price {
-  width: 300px;
+  width: 330px;
   float: right;
-  text-align: right;
+  text-align: left;
 }
 
-.result {
-  margin-bottom: 38px;
+.price-controls {
+  position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+  font-size: 0;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
 }
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+
+.price-controls label {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 38px;
+  cursor: pointer;
+}
+
+.price-controls .price-from,
+.price-controls .price-till {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.range-controls {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
+}
+
 
 .result p {
   display: inline;
 }
 
 .sorting-arrows {
-  width: 37px;
+  width: 70px;
   float: right;
   text-align: right;
 }
 
+.icon-up-dir,
+.icon-down-dir {
+  text-decoration: none;
+  font-size: 23px;
+  line-height: 20px;
+  color: #f2f2f2;
+}
+
+.icon-up-dir:hover,
+.icon-down-dir:hover {
+  color: #000000;
+}
+
+.icon-up-dir:active,
+.icon-down-dir:active,
+.sorting-arrows .active {
+  color: #81b3d2;
+}
+
+
 .results-content {
   height: 151px;
+  margin-top: 35px;
+  border-bottom: 2px solid #f2f2f2;
 }
 
 .hotel-photo {
@@ -469,7 +663,63 @@ footer .container {
 }
 
 .results-right {
-  width: 111px;
+  width: 130px;
   float: right;
   text-align: right;
 }
+
+.results-right .rating-numbers {
+  display: block;
+  margin-top: 45px;
+  background-color: #f2f2f2;
+  padding: 5px;
+}
+/* задан блочный тип, однако паддинги я прописать не могу*/
+
+.icon-star {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 19px;
+  line-height: 21px;
+  color: #81b3d2;
+}
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "symbols-sedona";
+  src: url("../fonts/symbols-sedona.woff") format("woff"),
+       url("../fonts/symbols-sedona.woff2") format("woff2");
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+
+  font-weight: normal;
+  line-height: 1em;
+  font-family: "symbols-sedona";
+  text-align: center;
+  text-transform: none;
+  text-decoration: inherit;
+  font-style: normal;
+  font-variant: normal;
+
+  speak: none;
+}
+
+.icon-facebook::before { content: "\66"; } /* "f" */
+.icon-twitter::before { content: "\74"; } /* "t" */
+.icon-up-dir::before { content: "\25b2"; } /* "▲" */
+.icon-down-dir::before { content: "\25bc"; } /* "▼" */
+.icon-star::before { content: "\2605"; } /* "★" */
+.icon-check-off::before { content: "\2610"; } /* "☐" */
+.icon-check-on::before { content: "\2611"; } /* "☑" */
+.icon-calendar::before { content: "\e800"; } /* "" */
+.icon-plus::before { content: "\e801"; } /* "" */
+.icon-minus::before { content: "\e802"; } /* "" */
+.icon-youtube::before { content: "\f39e"; } /* "" */
