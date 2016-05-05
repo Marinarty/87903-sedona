@@ -31,6 +31,7 @@ body {
   width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
+  /* box-shadow: 0 0 15px -5px rgba(0,0,0,.5);  для тени нужна оберка для всех контейнеров?*/
   /* Только для оформления сетки
   min-height: 56px; */
 }
@@ -161,7 +162,7 @@ p {
 .feature-right .feature-number,
 .feature-left .feature-number,
 .feature .feature-number {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .feature {
@@ -603,12 +604,61 @@ input[type="checkbox"] + .disabled::before {
   background: #ffffff;
 }
 
-
-.result p {
-  display: inline;
+.result {
+  margin-top: 30px;
+  font-size: 12px;
+  line-height: 18px;
+  border-bottom: 2px solid #f2f2f2;
+  margin-bottom: 30px;       /* не работает */
 }
 
-.sorting-arrows {
+.result p {
+  display: inline-block;
+  vertical-aligh: top;
+}
+
+.result a {
+  text-decoration: none;
+}
+
+
+.result .all {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  margin-right: 47px;
+}
+
+.result .sorting {
+  margin-right: 40px;
+}
+
+.result .sorting-price,
+.result .sorting-type   {
+  margin-right: 30px;
+}
+
+.result .sorting-type,
+.result .sorting-rating  {
+  color: #cccccc;
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.result .sorting-type:hover,
+.result .sorting-rating:hover  {
+  color: #81b3d2;
+}
+
+.result .sorting-type:active,
+.result .sorting-rating:active  {
+  color: #000000;
+}
+
+.result .active {
+  color: #81b3d2;
+}
+
+.result .sorting-arrows {
   width: 70px;
   float: right;
   text-align: right;
@@ -640,6 +690,48 @@ input[type="checkbox"] + .disabled::before {
   border-bottom: 2px solid #f2f2f2;
 }
 
+.results-content img {
+  display: block;
+}
+
+.results-left .hotel-name {
+  font-size: 21px;font-weight: bold;
+  line-height: 21px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.results-left .hotel-name:hover {
+  color: #81b3d2;
+}
+
+.results-left .hotel-name:active {
+    color: #b2b2b2;
+  }
+
+.results-left .more-info {
+  padding: 6px 15px;
+  background-color: #81b3d2;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.results-left .book {
+  padding: 6px 15px;
+  background-color: #766357;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+
 .hotel-photo {
   width: 135px;
   display: block;
@@ -658,23 +750,26 @@ input[type="checkbox"] + .disabled::before {
 }
 
 .results-right {
-  width: 130px;
+  width: 150px;
   float: right;
   text-align: right;
 }
 
 .results-right .rating-numbers {
-  display: block;
-  margin-top: 45px;
+  display: inline-block;
+  vertical-aligh: top;
+  margin-top: 38px;
   background-color: #f2f2f2;
-  padding: 5px;
+  padding: 5px 15px;
+  text-align: center;
+  color: #666666;
 }
-/* задан блочный тип, однако паддинги я прописать не могу*/
 
 .icon-star {
   display: inline-block;
   vertical-align: top;
   font-size: 19px;
+  margin-left: 5px;   /*откуда между ними лишние маргины? */
   line-height: 21px;
   color: #81b3d2;
 }
