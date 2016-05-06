@@ -91,31 +91,25 @@
         <form class="main-booking-form" action="#" method="post">
           <fieldset>
             <legend>Поиск гостиницы в Седоне</legend>
-            <div>
+            <div class=form-content>
+            <div class="arrive">
               <label for="date-arrive">Дата заезда:</label>
               <input id="date-arrive" type="text" name="date-arrive" value="24 апреля 2016"><button class="icon-calendar"></button>
             </div>
-            <div>
+            <div class="depart">
               <label for="date-departure">Дата выезда:</label>
               <input id="date-departure" type="text" name="date-departure" value="4 июля 2016"><button class="icon-calendar"></button>
             </div>
-            <div>
+            <div class="adult">
               <label for='adulte-number'>Взрослые:</label>
-                <div class='input-number'>
-                  <button class="icon-minus"></button>
-                    <input id='adulte-number' type="number" name="adulte-number" value="2">
-                  <button class="icon-plus"></button>
-                </div>
+                    <button class="icon-minus"></button><input id='adulte-number' type="number" name="adulte-number" value="2"><button class="icon-plus"></button>
             </div>
-            <div>
+            <div class="children">
               <label for='children-number'>Дети:</label>
-                <div class='input-number'>
-                  <button class="icon-minus"></button>
-                    <input id='children-number' type="number" name="children-number" value="2">
-                  <button class="icon-plus"></button>
-                </div>
+                    <button class="icon-minus"></button><input id='children-number' type="number" name="children-number" value="2"><button class="icon-plus"></button>
             </div>
             <button class="btn-booking" type="submit">Найти</button>
+            </div>
           </fieldset>
         </form>
 <!-- <div class="map">

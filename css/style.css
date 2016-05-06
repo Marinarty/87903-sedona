@@ -21,19 +21,11 @@ body {
   clear: both;
 }
 
-/* .main-header {
-  /* Только для оформления сетки
-  min-height: 56px;
-  не пригодилось
-} */
-
 .container {
   width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
-  /* box-shadow: 0 0 15px -5px rgba(0,0,0,.5);  для тени нужна оберка для всех контейнеров?*/
-  /* Только для оформления сетки
-  min-height: 56px; */
+  /* box-shadow: 0 0 15px -5px rgba(0,0,0,.5);  для тени как на макете нужна оберка для всех контейнеров?*/
 }
 
 .main-navigation {
@@ -99,7 +91,7 @@ h1 {
   padding: 0;
 }
 
-h3 {
+/* h3 {
   font-size: 21px;
   line-height: 21px;
   margin: 0;
@@ -148,7 +140,7 @@ p {
   width: 300px;
   float: left;
   text-align: center;
-  padding: 52px 50px;
+  padding: 54px 50px;
   background-color: #81b3d2;
   color: #ffffff;
 }
@@ -209,12 +201,6 @@ p {
   background: url("../img/souvenirs.png") no-repeat;
 }
 
-/* 1. рациональнее ли эти три иконки сделать спрайтом? Можено в одном проекте использовать и спрайты и икон. шрифты?
-   2. у иконки souvenirs значениz top и left отличаются (она визуально не распологалась по центру)
-   3. нужно ли выносить повторяющиеся свойства иконок в отдельный общий для них класс? насколько это критично?
-
- */
-
 .features-row-2 .feature {
   background-color: f2f2f2;
   padding-top: 45px;
@@ -234,13 +220,13 @@ p {
   width: 300px;
   float: right;
   text-align: center;
-  padding: 52px 50px;
+  padding: 54px 50px;
   background-color: #81b3d2;
   color: #ffffff;
 }
 
 .main-booking {
-  width: 460px;
+  width: 436px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 55px;
@@ -262,13 +248,9 @@ fieldset {
   padding: 0;
 }
 
-/* с формой все грустенько. мне нужен пинок, в каком направлении начать с ней работать - в плане размещения элементов формы*/
-
 .main-booking-form {
-  width: 576px;
+  width: 467px;
   height: 480px;
-/*padding-left: 52px;
-  padding-right:  52px; если прописывать паддинги форме, то разъезжается леджент и кнопка. Почему?*/
   margin-right: auto;
   margin-left: auto;
   margin-top: 52px;
@@ -277,11 +259,12 @@ fieldset {
   box-shadow: 0 1px 5px 0px;
   position: relative;
   index-z: 10;
+  box-shadow: 0 0 15px -5px rgba(0,0,0,.5);
 }
 
 .main-booking-form legend {
   background-color: #766357;
-  width: 100%;
+  width: 100%;                  /* как сделать чтобы размер брался не от fieldset а от booking-form? только выносить?*/
   font-size: 21px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -289,16 +272,23 @@ fieldset {
   text-align: center;
   color: #ffffff;
 }
+
+.main-booking-form {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 .main-booking-form input {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 6px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
   font-size: 14px;
   line-height: 21px;
   font-family: "PT Sans", "Arial", sans-serif;
   color: #000000;
   text-transform: uppercase;
   background-color: #f2f2f2;
+  border: none;
 }
 
 .main-booking-form input:hover {
@@ -308,12 +298,74 @@ fieldset {
 .main-booking-form input:focus {
   background-color: #ffffff;
   border: 2px solid #ebebeb;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;   /* как бороться с правым паддингом, который прыгает? или это лечится только изменением ширины для каждого поля?*/
+}
+
+.depart,
+.arrive {
+  margin-bottom: 28px;
+}
+
+
+.depart label,
+.arrive label,
+.adult label,
+.children label {
+  width: 110px;
+  margin-right: 0px;  /* не работет маргин*/
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.depart input,
+.arrive input {
+  display: inline-block;
+  vertical-align: middle;
+  width: 300px;
+}
+
+.adult input,
+.children input {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  width: 40px;
+  margin-left: 0;
+  margin-right: 0;  /* не выстраиваются в ряд почему ?*/
+}
+
+
+.main-booking-form .icon-calendar,  /* не работает text-align для календаря*/
+.main-booking-form .icon-minus,
+.main-booking-form .icon-plus {
+  border: none;
+  width: 37px;
+  height: 37px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #a9a9a9;
+  font-size: 21px;
+  text-align: center;
+}
+
+.main-booking-form .icon-calendar:hover {
+  color: #000000;
+}
+
+.main-booking-form .icon-calendar:active {
+  color: #81b3d2;
+}
+
+.main-booking-form .icon-minus,
+.main-booking-form .icon-plus {
+  font-size: 14px;
 }
 
  .main-booking-form .btn-booking {
   display: inline-block;
-  width: 450px;
-  margin: 54px 58px;
+  width: 458px;
   padding: 20px 0;
   font-weight: 700;
   font-size: 21px;
@@ -356,6 +408,10 @@ footer .container {
   padding-bottom: 36px;
 }
 
+.main-footer {
+  font-size: 0px;
+}
+
 .hotels {
   margin-top: 0px;
 }
@@ -364,11 +420,10 @@ footer .container {
 .footer-social,
 .footer-copyright {
   width: 400px;
-  float: left;
   display: inline-block;
   /* почему тут не работает inline-block ? */
   text-align: center;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .hash {
@@ -377,10 +432,13 @@ footer .container {
   font-weight: 700;
 }
 
+.footer-copyright {
+  font-size: 14px;
+  line-height: 26px;
+}
 
 .social-btn {
   display: inline-block;
-  position: relative;
   width: 45px;
   height: 48px;
   margin-right: 1px;    /* там явно есть какие-то доп. маргины, хотя шрифт обнулен */
@@ -394,9 +452,8 @@ footer .container {
 
 .social-btn span {
   font-size: 19px;
-  line-height: 20px;
-  position: absolute;
-  right: 10px;            /* не смогла выровнять иконки по центру без position. Перемудрила? */
+  line-height: 48px;
+  right: 10px;
   bottom: 15px;
 }
 
@@ -408,11 +465,6 @@ footer .container {
   background-color: #5496bd;
   color: rgba(255, 255, 255, 0.3);
 }
-
-/* .social-btn .social-btn-tw {
- background: url("../img/tw.png") no-repeat;
-}
-/* здесь я пробовала исп. изображение, а не шрифт. но иконка не отобразилась. почему? */
 
 .academy-logo {
   display: inline-block;
