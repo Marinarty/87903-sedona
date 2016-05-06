@@ -225,6 +225,16 @@ p {
   color: #ffffff;
 }
 
+.main-form {
+  position: relative;
+}
+
+.map {
+  position: absolute;
+  index-z: 5;
+  top: 237px;
+}
+
 .main-booking {
   width: 436px;
   margin-right: auto;
@@ -259,6 +269,7 @@ fieldset {
   box-shadow: 0 1px 5px 0px;
   position: relative;
   index-z: 10;
+  background-color: #ffffff;
   box-shadow: 0 0 15px -5px rgba(0,0,0,.5);
 }
 
@@ -410,6 +421,7 @@ footer .container {
 
 .main-footer {
   font-size: 0px;
+  margin-top: 21px;   /*не работает */
 }
 
 .hotels {
@@ -421,7 +433,6 @@ footer .container {
 .footer-copyright {
   width: 400px;
   display: inline-block;
-  /* почему тут не работает inline-block ? */
   text-align: center;
   vertical-align: middle;
 }
