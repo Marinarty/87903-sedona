@@ -91,14 +91,6 @@ h1 {
   padding: 0;
 }
 
-/* h3 {
-  font-size: 21px;
-  line-height: 21px;
-  margin: 0;
-  padding: 0;
-}
-/* возможно, не пригодится */
-
 p {
   margin: 0;
   padding: 0;
@@ -452,11 +444,11 @@ fieldset {
   margin-top: 56px;
 }
 
-.main-booking-form .btn:hover {
+.main-booking-form .btn-booking:hover {
   background-color: #669ec0;
 }
 
-.main-booking-form .btn:active {
+.main-booking-form .btn-booking:active {
   background-color: #5496bd;
 }
 
@@ -538,39 +530,30 @@ footer .footer-container {
 .academy-logo {
   display: inline-block;
   vertical-align: middle;
-  background: url("../img/academy-logo.png");
+  margin-left: 5px;
+  background: url("../img/academy-logo.png") no-repeat;
   width: 113px;
   height: 39px;
 }
 
 .academy-logo:hover {
-  background: url("../img/academy-logo-hvr.png");
+  background: url("../img/academy-logo-hvr.png") no-repeat;
 }
 
 .academy-logo:active {
   opacity: 0.3;
 }
 
-.container-inner {
-  width: 1054px;
-  margin: 0 auto;
-  padding-left: 73px; /* тут где-то ошибка, ты мне посоветовал поставить main паддинги и убрать маргины у элементов, но так мне вообще не удастся делать подложки.*/
-  padding-right: 73px;
-  background-color: #ffffff;
-}
-
 .hotels-selection {
-  margin-top: 35px;
   color: #ffffff;
   background: url("../img/background-inner.jpg") no-repeat;
-  /* Только для оформления сетки */
-
-  height: 217px;
+  padding-top: 25px;
+  height: 190px;
 }
 
 .infrastructure,
 .accomodation {
-  width: 300px;
+  width: 255px;
   float: left;
   text-align: left;
 }
@@ -581,13 +564,17 @@ line-height: 21px;
 font-weight: 700;
 }
 
+.hotels-selection .legend-price {
+  margin-bottom: 10px;
+}
+
 input[type="checkbox"] {
   display: none;
 }
 
 input[type="checkbox"] + label {
   display: block;
-  margin: 20px 0;
+  margin: 25px 0;
   line-height: 21px;
   padding-left: 40px;
   position: relative;
@@ -608,18 +595,18 @@ input[type="checkbox"]:checked + label::before {
 }
 
 input[type="checkbox"] + .disabled::before {
-  opacity: 0.3;
+  color: #6a6a6a;
 }
 
 .price {
-  width: 330px;
+  width: 320px;
   float: right;
   text-align: left;
 }
 
 .price-controls {
   position: relative;
-  height: 36px;
+  height: 34px;
   margin-bottom: 20px;
   font-size: 0;
   border: 2px solid #ffffff;
@@ -705,7 +692,7 @@ input[type="checkbox"] + .disabled::before {
 .btn-transparent {
   display: block;
   margin: 0 auto;
-  padding: 6px 35px;
+  padding: 6px 33px;
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
@@ -719,16 +706,23 @@ input[type="checkbox"] + .disabled::before {
 
 .btn-transparent:hover {
   color: #000000;
-
   background: #ffffff;
+}
+
+.hotels-selection,
+.result,
+.results-content {
+  padding-left: 70px;
+  padding-right: 70px;
+
 }
 
 .result {
   margin-top: 30px;
-  font-size: 12px;
+  font-size: 0;
   line-height: 18px;
   border-bottom: 2px solid #f2f2f2;
-  padding-bottom: 30px;
+  padding-bottom: 28px;
 }
 
 .result p {
@@ -750,17 +744,20 @@ input[type="checkbox"] + .disabled::before {
 
 .result .sorting {
   margin-right: 40px;
+  font-size: 12px;
 }
 
 .result .sorting-price,
 .result .sorting-type   {
-  margin-right: 30px;
+  margin-right: 35px;
+  font-size: 12px;
 }
 
 .result .sorting-type,
 .result .sorting-rating  {
   color: #cccccc;
   border-bottom: 1px dotted #81b3d2;
+  font-size: 12px;
 }
 
 .result .sorting-type:hover,
@@ -781,14 +778,22 @@ input[type="checkbox"] + .disabled::before {
   width: 70px;
   float: right;
   text-align: right;
+  margin-right: 5px;
 }
 
 .icon-up-dir,
 .icon-down-dir {
   text-decoration: none;
+  width: 20px;
+  height: 20px;
+  text-align: center;
   font-size: 23px;
   line-height: 20px;
   color: #f2f2f2;
+  display: inline-block;
+  vertical-align: middle;  /* не работает */
+  margin: 0;
+  padding: 0;
 }
 
 .icon-up-dir:hover,
@@ -798,26 +803,27 @@ input[type="checkbox"] + .disabled::before {
 
 .icon-up-dir:active,
 .icon-down-dir:active,
-.sorting-arrows .active {
+.sorting-arrows .active:active {
   color: #81b3d2;
 }
 
 
 .results-content {
-  padding-top: 35px;
+  padding-top: 30px;
   border-bottom: 2px solid #f2f2f2;
-  padding-bottom: 35px;
+  padding-bottom: 30px;
 }
 
 .results-content img {
-  display: block;
+  display: block;   /* остается отступ снизу у картинки */
 }
 
 .results-left .hotel-name {
-  font-size: 21px;font-weight: bold;
-  line-height: 21px;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
   text-decoration: none;
-  color: #000000;
+  color: #000000;         /* остаются паддинги сверху, снизу, даже если я их сбрасываю */
 }
 
 .results-left .hotel-name:hover {
@@ -828,8 +834,23 @@ input[type="checkbox"] + .disabled::before {
     color: #b2b2b2;
   }
 
+  .results-left .type,
+  .results-left .pricing {
+    width: 111px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 3px;
+    margin-bottom: 18px;
+  }
+
+  .results-left .type {
+    width: 111px;
+
+  }
+
 .results-left .more-info {
-  padding: 6px 15px;
+  padding: 4px 18px;
+  margin-right: 2px;
   background-color: #81b3d2;
   font-size: 14px;
   font-weight: 700;
@@ -839,8 +860,17 @@ input[type="checkbox"] + .disabled::before {
   font-family: "PT Sans", "Arial", sans-serif;
 }
 
+.results-left .more-info:hover {
+  background-color: #669ec0;
+}
+
+.results-left .more-info:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .results-left .book {
-  padding: 6px 15px;
+  padding: 4px 18px;
   background-color: #766357;
   font-size: 14px;
   font-weight: 700;
@@ -850,6 +880,14 @@ input[type="checkbox"] + .disabled::before {
   font-family: "PT Sans", "Arial", sans-serif;
 }
 
+.results-left .book:hover {
+  background-color: #604e43;
+}
+
+.results-left .book:active {
+  background-color: #503e33;
+  color: rgba(255, 255, 255, 0.3);
+}
 
 .hotel-photo {
   width: 135px;
@@ -884,11 +922,16 @@ input[type="checkbox"] + .disabled::before {
   color: #666666;
 }
 
+.results-right .rating {
+  font-size: 0;
+}
+
 .icon-star {
   display: inline-block;
   vertical-align: top;
+  width: 23px;
+  height: 23px;
   font-size: 19px;
-  margin-left: 5px;   /*откуда между ними лишние маргины? */
   line-height: 21px;
   color: #81b3d2;
 }

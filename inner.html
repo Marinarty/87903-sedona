@@ -8,8 +8,8 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div class="container">
     <header class="main-header">
-      <div class="container">
         <nav class="main-navigation clearfix">
           <ul>
             <li>
@@ -27,12 +27,11 @@
           </ul>
         <a class="logo" href="#" title="Седона"><img src="img/logo.png" alt="Седона"></a>
         </nav>
-      </div>
     </header>
-  <main class="container-inner">
+  <main>
       <form class="hotels-selection clearfix">
         <fieldset class="infrastructure">
-          <legend>Инфраструктура</legend>
+          <legend>Инфраструктура:</legend>
               <input type="checkbox" id="pool" checked>
               <label for="pool">Бассейн</label>
               <input type="checkbox" id="parking">
@@ -41,7 +40,7 @@
               <label class="disabled" for="wi-fi">Wi-Fi</label>
         </fieldset>
         <fieldset class="accomodation">
-          <legend>Тип жилья</legend>
+          <legend>Тип жилья:</legend>
               <input type="checkbox" id="hotels" checked>
               <label for="hotels">Гостиница</label>
               <input type="checkbox" id="motel" checked>
@@ -50,7 +49,7 @@
               <label for="app">Апартаменты</label>
         </fieldset>
         <fieldset class="price">
-          <legend>Стоимость в сутки (р)</legend>
+          <legend class="legend-price">Стоимость в сутки: (р)</legend>
           <div class="price-controls">
             <label class="price-from">от <input type="text" name="price-from" value="0"></label>
             <label class="price-till">до <input type="text" name="price-till" value="3000"></label>
@@ -80,7 +79,7 @@
     <div class="results-left">
         <a class="hotel-photo" href="#"><img src="img/hotel-1.jpg" alt="Amara Resort & Spa"></a>
       <div class="hotel-info">
-        <a class="hotel-name" href="#">Amara Resort & Spa</a>  <!-- насколько ужасно, если я не делаю hotel name h3, например ? -->
+        <a class="hotel-name" href="#">Amara Resort & Spa</a>
         <div class="details">
           <p class="type">Гостиница</p>
           <p class="pricing">от 3500 р.</p>
@@ -143,18 +142,19 @@
       </div>
   </div>
   </main>
-   <footer class="main-footer hotels">
-      <div class="container clearfix">
-        <section class="hash">#visitsedona</section>
-        <section class="footer-social">
-          <a class="social-btn social-btn-tw" href="#">Twitter</a>
-          <a class="social-btn social-btn-fb" href="#">Facebook</a>
-          <a class="social-btn social-btn-ytb" href="#">YouTube</a>
-        </section>
-        <section class="footer-copyright">
-        website by <a href="https://up.htmlacademy.ru" target="_blank"><img src="img/academy-logo.png" alt="HTML Academy"></a>
-        </section>
-      </div>
-    </footer>
-  </body>
+  <footer class="main-footer clearfix">
+     <div class="footer-container">
+       <section class="hash">#visitsedona</section>
+       <section class="footer-social">
+         <a class="social-btn" href="#">Twitter<span class="icon-twitter"></span></a>
+         <a class="social-btn" href="#">Facebook<span class="icon-facebook"></span></a>
+         <a class="social-btn" href="#">YouTube<span class="icon-youtube"></span></a>
+       </section>
+       <section class="footer-copyright">
+       website by <a class="academy-logo" href="https://htmlacademy.ru/" target="_blank"></a>
+       </section>
+     </div>
+   </footer>
+   </div>
+ </body>
 </html>
