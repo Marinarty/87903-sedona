@@ -10,7 +10,7 @@ body {
   line-height: 21px;
   color: #000000;
   font-family: "PT Sans", "Arial", sans-serif;
-  background-color: f2f2f2;
+  background-color: #f2f2f2;
   text-transform: uppercase;
 }
 
@@ -80,13 +80,13 @@ body {
 .main-navigation li:nth-child(-n+2) {
   float:left;
   text-align: left;
-  margin-right: 32px;
+  margin-right: 2.8%;
 }
 
 .main-navigation li:nth-last-child(-n+2) {
    float: right;
    text-align: right;
-   margin-left: 30px;
+   margin-left: 2.8%;
 }
 
 h1 {
@@ -509,7 +509,7 @@ fieldset {
 
 .social-btn {
   display: inline-block;
-  width: 45px;
+  width: 46px;
   height: 48px;
   margin-right: 5px;
   font-size: 0px;
@@ -725,8 +725,8 @@ input[type="checkbox"] + .disabled::before {
 .hotels-selection,
 .result,
 .results-content {
-  padding-left: 70px;
-  padding-right: 70px;
+  padding-left: 6%;
+  padding-right: 6%;
 
 }
 
@@ -828,7 +828,7 @@ input[type="checkbox"] + .disabled::before {
 }
 
 .results-content img {
-  display: block;   /* остается отступ снизу у картинки */
+  display: block;
 }
 
 .results-left .hotel-name {
@@ -836,7 +836,11 @@ input[type="checkbox"] + .disabled::before {
   font-weight: 700;
   line-height: 26px;
   text-decoration: none;
-  color: #000000;         /* остаются паддинги сверху, снизу, даже если я их сбрасываю */
+  color: #000000;
+  display: inline-block;
+  position: relative;
+  top: -5px;
+  vertical-align: top;
 }
 
 .results-left .hotel-name:hover {
@@ -912,6 +916,7 @@ input[type="checkbox"] + .disabled::before {
 .results-left {
   width: 70%;
   float: left;
+  padding: 0;
 }
 
 .hotel-info {
@@ -927,8 +932,8 @@ input[type="checkbox"] + .disabled::before {
 
 .results-right .rating-numbers {
   display: inline-block;
-  vertical-aligh: top;
-  margin-top: 38px;
+  vertical-align: top;
+  margin-top: 36px;
   background-color: #f2f2f2;
   padding: 5px 15px;
   text-align: center;
