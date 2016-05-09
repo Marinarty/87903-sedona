@@ -305,7 +305,7 @@ fieldset {
   padding-left: 10px;
   padding-right: 47px;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 22px;
   font-family: "PT Sans", "Arial", sans-serif;
   color: #000000;
   text-transform: uppercase;
@@ -405,6 +405,15 @@ fieldset {
 -webkit-appearance: textfield;
 -moz-appearance: textfield;
 appearance: textfield;
+}
+
+.adult input::-webkit-inner-spin-button,
+.adult input::-webkit-outer-spin-button {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+margin: 0;
+}
 }
 
 .main-booking-form .icon-calendar,
