@@ -410,7 +410,9 @@ appearance: textfield;
 }
 
 .adult input::-webkit-inner-spin-button,
-.adult input::-webkit-outer-spin-button {
+.adult input::-webkit-outer-spin-button,
+.children input::-webkit-inner-spin-button,
+.children input::-webkit-outer-spin-button {
 -webkit-appearance: none;
 -moz-appearance: none;
 appearance: none;
@@ -469,7 +471,7 @@ margin: 0;
   border: none;
   outline: none;
   cursor: pointer;
-  margin-top: 56px;
+  margin-top: 54px;
 }
 
 .main-booking-form .btn-booking:hover {
@@ -858,6 +860,7 @@ input[type="checkbox"] + .disabled::before {
   position: relative;
   top: -5px;
   vertical-align: top;
+   margin-bottom: 2px;
 }
 
 .results-left .hotel-name:hover {
@@ -873,7 +876,7 @@ input[type="checkbox"] + .disabled::before {
     width: 111px;
     display: inline-block;
     vertical-align: top;
-    margin-right: 3px;
+    margin-right: 2px;
     margin-bottom: 18px;
   }
 
