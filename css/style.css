@@ -345,14 +345,14 @@ fieldset {
 .adult .icon-plus,
 .children .icon-plus {
   position: absolute;
-  left: 80px;
+  right: 0;
 }
 
 .adult .icon-minus,
 .children .icon-minus {
   position: absolute;
+  left: 0;
 }
-
 
 .arrive .icon-calendar,
 .depart .icon-calendar {
@@ -399,6 +399,13 @@ fieldset {
   padding-right: 37px
 }
 
+
+.adult input,
+.children input {
+-webkit-appearance: textfield;
+-moz-appearance: textfield;
+appearance: textfield;
+}
 
 .main-booking-form .icon-calendar,
 .main-booking-form .icon-minus,
