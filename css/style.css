@@ -304,7 +304,7 @@ fieldset {
   padding-bottom: 6px;
   padding-left: 10px;
   padding-right: 47px;
-  font-size: 14px;
+  font-size: 0;
   line-height: 22px;
   font-family: "PT Sans", "Arial", sans-serif;
   color: #000000;
@@ -385,6 +385,7 @@ fieldset {
   display: inline-block;
   vertical-align: middle;
   width: 283px;
+  font-size: 14px;
 }
 
 .adult input,
@@ -396,7 +397,8 @@ fieldset {
   margin-left: 0;
   margin-right: 0;
   padding-left: 37px;
-  padding-right: 37px
+  padding-right: 37px;
+  font-size: 14px;
 }
 
 
@@ -413,7 +415,6 @@ appearance: textfield;
 -moz-appearance: none;
 appearance: none;
 margin: 0;
-}
 }
 
 .main-booking-form .icon-calendar,
