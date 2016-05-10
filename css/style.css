@@ -16,7 +16,6 @@ body {
 
 .clearfix::after {
   content: "";
-
   display: table;
   clear: both;
 }
@@ -142,12 +141,6 @@ p {
   color: #ffffff;
 }
 
-.feature-left p {
- font-size: 14px;
- line-height: 21px;
-}
-
-
 .feature-right .feature-number,
 .feature-left .feature-number,
 .feature .feature-number {
@@ -254,7 +247,6 @@ p {
   margin-top: 56px;
   margin-bottom: 30px;
 }
-
 
 .form-title {
   background-color: #766357;
@@ -399,14 +391,9 @@ fieldset {
   padding-left: 37px;
   padding-right: 37px;
   font-size: 14px;
-}
-
-
-.adult input,
-.children input {
--webkit-appearance: textfield;
--moz-appearance: textfield;
-appearance: textfield;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .adult input::-webkit-inner-spin-button,
@@ -434,7 +421,7 @@ margin: 0;
   margin: 0;
   outline: none;
   border: none;
-  background: none;   /* не знаю, откуда они брали бэкграунд, пришлось убрать его так*/
+  background: none;
 }
 
 .main-booking-form .icon-calendar:hover,
@@ -657,7 +644,6 @@ input[type="checkbox"] + .disabled::before {
   transform: translate(-50%, -50%);
 }
 
-
 .price-controls label {
   display: inline-block;
   vertical-align: top;
@@ -669,7 +655,7 @@ input[type="checkbox"] + .disabled::before {
 .price-controls .price-from,
 .price-controls .price-till {
   width: 90px;
-  padding-left: 65px;
+  padding-left: 60px;
 }
 
 .price-controls input {
@@ -748,7 +734,6 @@ input[type="checkbox"] + .disabled::before {
 .results-content {
   padding-left: 6%;
   padding-right: 6%;
-
 }
 
 .result {
@@ -815,17 +800,18 @@ input[type="checkbox"] + .disabled::before {
   position: relative;
 }
 
-
 .icon-up {
-  border: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
   border-bottom: 10px solid #cccccc;
   position: absolute;
-  top: 5px;
+  top: 10px;
   right: 17px;
 }
 
 .icon-down {
-  border: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
   border-top: 10px solid #cccccc;
   position: absolute;
   top: 10px;
@@ -856,50 +842,15 @@ input[type="checkbox"] + .disabled::before {
   border-top-color: #81b3d2;
 }
 
-
-/*
-
-.result .sorting-arrows {
-  width: 70px;
-  float: right;
-  text-align: right;
-  margin-right: 5px;
-  margin-left: 0;
-  padding-top: 3px;
-  position: relative;
-}
-
-.icon-up-dir,
-.icon-down-dir {
-  text-decoration: none;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  font-size: 23px;
-  line-height: 20px;
-  color: #f2f2f2;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0;
-  padding: 0;
-}
-
-.icon-up-dir:hover,
-.icon-down-dir:hover {
-  color: #000000;
-}
-
-.icon-up-dir:active,
-.icon-down-dir:active,
+.sorting-arrows .active:hover,
 .sorting-arrows .active:active {
-  color: #81b3d2;
+  border-top-color: #81b3d2;
 }
 
-*/
 .results-content {
   padding-top: 30px;
   border-bottom: 2px solid #f2f2f2;
-  padding-bottom: 27px;
+  padding-bottom: 29px;
 }
 
 .results-content img {
@@ -925,21 +876,20 @@ input[type="checkbox"] + .disabled::before {
 
 .results-left .hotel-name:active {
     color: #b2b2b2;
-  }
+}
 
-  .results-left .type,
-  .results-left .pricing {
-    width: 111px;
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 2px;
-    margin-bottom: 18px;
-  }
+.results-left .type,
+.results-left .pricing {
+  width: 111px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 2px;
+  margin-bottom: 16px;
+}
 
-  .results-left .type {
-    width: 111px;
-
-  }
+.results-left .type {
+  width: 111px;
+}
 
 .results-left .more-info {
   padding: 4px 18px;
@@ -1011,7 +961,7 @@ input[type="checkbox"] + .disabled::before {
   vertical-align: top;
   margin-top: 36px;
   background-color: #f2f2f2;
-  padding: 5px 15px;
+  padding: 2px 15px;
   text-align: center;
   color: #666666;
   margin-top: 40px;
