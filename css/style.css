@@ -631,7 +631,7 @@ input[type="checkbox"] + .disabled::before {
 }
 
 .price {
-  width: 320px;
+  width: 325px;
   float: right;
   text-align: left;
 }
@@ -643,6 +643,7 @@ input[type="checkbox"] + .disabled::before {
   font-size: 0;
   border: 2px solid #ffffff;
   border-radius: 2px;
+  margin-left: 8px;
 }
 
 .price-controls::after {
@@ -661,7 +662,7 @@ input[type="checkbox"] + .disabled::before {
   display: inline-block;
   vertical-align: top;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 32px;
   cursor: pointer;
 }
 
@@ -684,6 +685,7 @@ input[type="checkbox"] + .disabled::before {
 .range-controls {
   position: relative;
   margin-bottom: 32px;
+  margin-left: 8px;
 }
 
 .range-controls .scale {
@@ -809,8 +811,62 @@ input[type="checkbox"] + .disabled::before {
 .result .sorting-arrows {
   width: 70px;
   float: right;
+  margin-right: 5px;
+  position: relative;
+}
+
+
+.icon-up {
+  border: 5px solid transparent;
+  border-bottom: 10px solid #cccccc;
+  position: absolute;
+  top: 5px;
+  right: 17px;
+}
+
+.icon-down {
+  border: 5px solid transparent;
+  border-top: 10px solid #cccccc;
+  position: absolute;
+  top: 10px;
+  right: -5px;
+}
+
+.sorting-arrows .active {
+  border: 5px solid transparent;
+  border-top: 10px solid #81b3d2;
+  position: absolute;
+  top: 10px;
+  right: -5px;
+}
+
+.icon-up:hover {
+  border-bottom-color: #000000;
+}
+
+.icon-down:hover {
+  border-top-color: #000000;
+}
+
+.icon-up:active {
+  border-bottom-color: #81b3d2;
+}
+
+.icon-down:active {
+  border-top-color: #81b3d2;
+}
+
+
+/*
+
+.result .sorting-arrows {
+  width: 70px;
+  float: right;
   text-align: right;
   margin-right: 5px;
+  margin-left: 0;
+  padding-top: 3px;
+  position: relative;
 }
 
 .icon-up-dir,
@@ -823,7 +879,7 @@ input[type="checkbox"] + .disabled::before {
   line-height: 20px;
   color: #f2f2f2;
   display: inline-block;
-  vertical-align: middle;  /* не работает */
+  vertical-align: middle;
   margin: 0;
   padding: 0;
 }
@@ -839,11 +895,11 @@ input[type="checkbox"] + .disabled::before {
   color: #81b3d2;
 }
 
-
+*/
 .results-content {
   padding-top: 30px;
   border-bottom: 2px solid #f2f2f2;
-  padding-bottom: 30px;
+  padding-bottom: 27px;
 }
 
 .results-content img {
@@ -860,7 +916,7 @@ input[type="checkbox"] + .disabled::before {
   position: relative;
   top: -5px;
   vertical-align: top;
-   margin-bottom: 2px;
+  margin-bottom: 2px;
 }
 
 .results-left .hotel-name:hover {
@@ -958,10 +1014,13 @@ input[type="checkbox"] + .disabled::before {
   padding: 5px 15px;
   text-align: center;
   color: #666666;
+  margin-top: 40px;
 }
 
 .results-right .rating {
   font-size: 0;
+  position: relative;
+  top: -2px;
 }
 
 .icon-star {
@@ -970,7 +1029,7 @@ input[type="checkbox"] + .disabled::before {
   width: 23px;
   height: 23px;
   font-size: 19px;
-  line-height: 21px;
+  line-height: 1px;
   color: #81b3d2;
 }
 
