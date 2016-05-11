@@ -565,7 +565,7 @@ margin: 0;
 
 .hotels-selection {
   color: #ffffff;
-  background: url("../img/background-inner.jpg") no-repeat;
+  background: #e5f2fa url("../img/background-inner.jpg") no-repeat;
   padding-top: 25px;
   height: 190px;
 }
