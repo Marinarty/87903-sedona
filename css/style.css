@@ -591,9 +591,9 @@ fieldset {
 
 .hotels-selection {
   color: #ffffff;
-  background: #e5f2fa url("../img/background-inner.jpg") no-repeat;
+  background: #e5f2fa url("../img/filter background.png") no-repeat;
   padding-top: 25px;
-  height: 190px;
+  padding-bottom: 6px;
 }
 
 .infrastructure,
