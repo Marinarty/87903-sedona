@@ -344,11 +344,16 @@ fieldset {
   vertical-align: middle;
 }
 
+.depart-input:hover input,
+.arrive-input:hover input,
 .adult-input:hover input,
 .children-input:hover input {
   background-color: #ebebeb;
+  border-color: #ebebeb;
 }
 
+.depart-input input:focus,
+.arrive-input input:focus,
 .adult-input input:focus,
 .children-input input:focus {
   background-color: #ffffff;
@@ -969,7 +974,7 @@ input[type="checkbox"]:disabled + label {
 }
 
 .hotel-photo img {
-  max-width: 135px;
+  max-width: 100%;
 }
 
 .results-left {
