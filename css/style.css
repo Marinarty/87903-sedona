@@ -344,6 +344,16 @@ fieldset {
   vertical-align: middle;
 }
 
+.adult-input:hover input,
+.children-input:hover input {
+  background-color: #ebebeb;
+}
+
+.adult-input input:focus,
+.children-input input:focus {
+  background-color: #ffffff;
+}
+
 .adult .icon-plus,
 .children .icon-plus {
   position: absolute;
@@ -667,7 +677,11 @@ input[type="checkbox"]:disabled + label {
   cursor: pointer;
 }
 
-.price-controls .price-from,
+.price-controls .price-from {
+  width: 87px;
+  padding-left: 63px;
+}
+
 .price-controls .price-till {
   width: 90px;
   padding-left: 60px;
@@ -756,16 +770,18 @@ input[type="checkbox"]:disabled + label {
   font-size: 0;
   line-height: 18px;
   border-bottom: 2px solid #f2f2f2;
-  padding-bottom: 28px;
+  padding-bottom: 30px;
 }
 
 .result p {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: bottom;
 }
 
 .result a {
   text-decoration: none;
+  display: inline-block;
+  vertical-align: bottom;
 }
 
 .result .all {
@@ -946,10 +962,14 @@ input[type="checkbox"]:disabled + label {
 }
 
 .hotel-photo {
-  max-width: 135px;
+  width: 135px;
   display: block;
   float: left;
   margin-right: 30px;
+}
+
+.hotel-photo img {
+  max-width: 135px;
 }
 
 .results-left {
